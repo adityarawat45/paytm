@@ -1,18 +1,19 @@
 const mongoose = require("mongoose")
-mongoose.connect("mongodb+srv://rawataditya193:44296889@cluster0.qz9zc0g.mongodb.net/");
+mongoose.connect("mongodb+srv://rawataditya193:44296889@cluster0.bzhgsx7.mongodb.net/");
 
 const userSchema=  mongoose.Schema({
   username : {
     required : true,
+    type : String,
     unique : true,
     minLength : 5,
-    maxLength : 15
+    maxLength : 25
   },
   firstName : {
     type : String,
     required : true
   },
-  lastname : {
+  lastName : {
     type : String,
     required : true,
   },

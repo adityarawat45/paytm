@@ -1,4 +1,4 @@
-const {JWT_SECRET} = require("../config");
+const {JWT_SECRET} = require("../backend/config");
 const jwt = require("jsonwebtoken");
 
 const authMiddleware = (req,res,next) => {
