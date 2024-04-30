@@ -9,5 +9,5 @@ app.use("/api/v1",mainRouter);
 
 // app.use("api/v2/",v2Router);
 
-app.listen(3001);
+app.listen(3000);
 

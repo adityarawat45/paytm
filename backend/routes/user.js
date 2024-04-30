@@ -18,7 +18,7 @@ router.post("/signup", async (req, res) => {
     const { success } = signupBody.safeParse(req.body)
     if (!success) {
         return res.status(411).json({
-            message: "Email already taken / Incorrect inputs"
+            message: "Incorrect inputs"
         })
     }
 
@@ -65,8 +65,8 @@ router.post("/signin", async (req, res) => {
     const { success } = signinBody.safeParse(req.body)
     if (!success) {
         return res.status(411).json({
-            message: "Email already taken / Incorrect inputs"
-        })
+            message: "Input format isn't correct"
+        }) 
     }
 
     const user = await User.findOne({
@@ -87,7 +87,7 @@ router.post("/signin", async (req, res) => {
 
     
     res.status(411).json({
-        message: "Error while logging in"
+        message: "Error while logging in/Wrong inputs"
     })
 })
 
